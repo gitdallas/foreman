@@ -44,6 +44,7 @@ import { WelcomeAuthSource } from './AuthSource/Welcome';
 import { WelcomeConfigReports } from './ConfigReports/Welcome';
 import { WelcomeArchitecture } from './Architectures/Welcome';
 import JwtTokens from './users/JwtTokens/JwtTokens';
+import ActivationKeys from './ActivationKeys';
 
 const componentRegistry = {
   registry: forceSingleton('component_registry', () => ({})),
@@ -178,6 +179,7 @@ const coreComponents = [
   { name: 'WelcomeAuthSource', type: WelcomeAuthSource },
   { name: 'WelcomeConfigReports', type: WelcomeConfigReports },
   { name: 'WelcomeArchitecture', type: WelcomeArchitecture },
+  { name: 'ActivationKeys', type: ActivationKeys },
 ];
 
 if (!componentRegistry.registry[coreComponents[0].name]) {
